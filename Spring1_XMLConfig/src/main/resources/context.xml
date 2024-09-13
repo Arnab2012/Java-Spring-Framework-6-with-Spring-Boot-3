@@ -1,0 +1,35 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+<!--    <bean id="alien" class="com.arnab.spring1_xmlconfig.Alien"></bean> &lt;!&ndash; by default Singleton Scope so only one object &ndash;&gt;-->
+
+<!--    usage of property object -->
+<!--    <bean id="alien" class="com.arnab.spring1_xmlconfig.Alien" scope="prototype"></bean>-->
+
+
+<!--    <bean id="alien" class="com.arnab.spring1_xmlconfig.Alien">-->
+<!--        <property name="age" value="21"/> &lt;!&ndash; primitive value inject &ndash;&gt;-->
+<!--        <property name="lap" ref="lappy"/> &lt;!&ndash; reference value inject &ndash;&gt;-->
+<!--    </bean>-->
+
+<!--    Constructor Injection  -->
+<!--        <bean id="alien" class="com.arnab.spring1_xmlconfig.Alien">-->
+<!--            <constructor-arg  value="22"/>-->
+<!--&lt;!&ndash;            <constructor-arg ref="desk1"/>&ndash;&gt;-->
+<!--            <constructor-arg  ref="lappy"/>-->
+<!--        </bean>-->
+
+<!--    no of times bean tag used that number of times object will be created -->
+<!--    <bean id="alien1" class="com.arnab.spring1_xmlconfig.Alien"></bean>-->
+
+
+    <bean id="alien" class="com.arnab.spring1_xmlconfig.Alien" autowire="byType">
+<!--        <property name="com" ref="com1"/>-->
+    </bean>
+    <bean class="com.arnab.spring1_xmlconfig.Laptop" primary="true"/>
+    <bean class="com.arnab.spring1_xmlconfig.Desktop1" lazy-init="true"/>
+
+</beans>
