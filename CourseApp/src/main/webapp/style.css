@@ -1,0 +1,51 @@
+body {
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333; /* Dark text color for better readability */
+}
+
+.navbar {
+    background-color: #17a2b8; /* Bootstrap info color */
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    color: #fff; /* White text for nav links */
+}
+
+.container {
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 16px;
+}
+
+.card-body ul {
+    padding-left: 20px;
+}
+
+.card-body ul li {
+    list-style-type: circle;
+    color: #007bff; /* Blue color for list items */
+}
