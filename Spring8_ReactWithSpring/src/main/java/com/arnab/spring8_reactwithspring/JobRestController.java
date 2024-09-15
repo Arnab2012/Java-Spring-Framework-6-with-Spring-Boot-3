@@ -45,4 +45,17 @@ public class JobRestController {
         service.deleteJob(postId);
         return "Deleted";
     }
+
+//  method to load dummy data when the table is created first
+    @GetMapping("load")
+    public void load(){
+        service.load();
+    }
+
+//  method to search by keywords
+    @GetMapping("jobPost/keyword/{keyword}")
+    public List<JobPost> search(@PathVariable("keyword") String keyword){
+        return service.search(keyword);
+    }
+
 }
