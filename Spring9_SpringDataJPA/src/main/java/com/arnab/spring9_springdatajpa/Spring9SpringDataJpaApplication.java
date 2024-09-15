@@ -31,14 +31,14 @@ public class Spring9SpringDataJpaApplication {
 		s2.setMarks(85);
 
 		s3.setRollNo(3);
-		s3.setName("Pritam");
+		s3.setName("Sayan");
 		s3.setMarks(76);
 
 //		to save a row in the table
 //		repo.save(s1);
 
-		repo.save(s2);
-		repo.save(s3);
+//		repo.save(s2);
+//		repo.save(s3);
 
 //		for fetching all data
 		System.out.println(repo.findAll());
@@ -49,9 +49,15 @@ public class Spring9SpringDataJpaApplication {
 		Optional<Student> s=repo.findById(4);
 		System.out.println(s.orElse(new Student()));
 
-		System.out.println(repo.findByName("Ayan"));
-		System.out.println(repo.findByMarks(85));
+//		System.out.println(repo.findByName("Ayan"));
+//		System.out.println(repo.findByMarks(85));
 		System.out.println(repo.findByMarksGreaterThan(72));
+
+//		to update a row in a table
+		repo.save(s3); // checks first the row is present or not if present then update else save
+
+//		to delete a row in a table
+		repo.delete(s2);
 	}
 
 
