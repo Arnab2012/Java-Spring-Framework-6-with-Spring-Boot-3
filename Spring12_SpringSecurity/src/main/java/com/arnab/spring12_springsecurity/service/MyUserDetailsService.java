@@ -1,5 +1,6 @@
 package com.arnab.spring12_springsecurity.service;
 
+import com.arnab.spring12_springsecurity.model.UserPrincipal;
 import com.arnab.spring12_springsecurity.model.Users;
 import com.arnab.spring12_springsecurity.repo.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
