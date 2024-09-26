@@ -1,0 +1,2 @@
+This is my first git commit via terminal.
+Hello World Git here!!
