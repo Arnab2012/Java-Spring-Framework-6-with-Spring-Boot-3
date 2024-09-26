@@ -1,0 +1,19 @@
+Git Commands
+-------------------
+
+
+git init -> to create a local repository in our working directory, after this a hidden .git 		file will be created in the working directory, where git will track all the files and 		insertion deletions in that working directory.
+
+git status -> to check the status of local git repository
+git add <file-name> -> to add any file from the working directory to git staged area
+git commit -m "custom message" -> to save the file in local repository (either from staged or 				directly from working directory)
+
+git log -> to see the commit history in the git local repository
+
+local directory --> git staged area --> local repository (git commit)
+if we want to commit without staging then -> git commit -a -m "custom message"
+
+git diff -> to check the changes in a file (in working directory, before staging)
+git diff --staged -> to check the changes in a file (after staging) 
+
+git rm <file-name> -> to remove file form local repository
