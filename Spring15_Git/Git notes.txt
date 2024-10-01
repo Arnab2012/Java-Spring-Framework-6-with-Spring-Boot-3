@@ -1,0 +1,95 @@
+# Git Commands
+
+## Git Repository Initialization
+git init  
+# Initializes a local repository in the current working directory.
+
+## Checking Status and Changes
+git status  
+# Shows the status of files in the working directory (untracked, modified, staged).
+
+git diff  
+# Shows the changes in files (compares the working directory with the staging area).
+
+git diff --staged  
+# Shows the changes in files that have been staged but not yet committed.
+
+## Staging and Committing Changes
+git add <file-name>  
+# Stages a file to be committed.
+
+git commit -m "custom message"  
+# Commits the staged changes to the local repository.
+
+git commit -a -m "custom message"  
+# Commits all tracked files (bypassing the staging area).
+
+## Viewing Commit History
+git log  
+# Displays the commit history of the repository.
+
+git log --pretty=oneline  
+# Shows each commit in one line, displaying only the commit hash and message.
+
+git log --graph  
+# Visualizes the commit history as a graph.
+
+## Removing Files
+git rm <file-name>  
+# Removes a file from the working directory and stages the deletion for commit.
+
+## Working with Remote Repositories
+git remote add origin <url>  
+# Links the local repository to a remote repository.
+
+git push origin <branch-name>  
+# Pushes changes from the local branch to the remote repository.
+
+## Tags
+git tag <tagname>  
+# Creates a tag.
+
+git push origin <tagname>  
+# Pushes the tag to the remote repository.
+
+## Branching
+git checkout -b <branch-name>  
+# Creates and switches to a new branch.
+
+git switch -c <branch-name>  
+# An alternative way to create and switch to a new branch.
+
+git branch  
+# Lists all local branches.
+
+git branch --all  
+# Lists all local and remote branches.
+
+git branch -m <new-name>  
+# Renames the current branch.
+
+git switch <branch-name>  
+# Switches to an existing branch.
+
+git switch -  
+# Switches to the previous branch.
+
+git branch -d <branch-name>  
+# Deletes the specified local branch.
+
+git push origin <branch-name>  
+# Pushes the local branch to the remote repository.
+
+## Merging and Pulling
+git pull origin main  
+# Fetches and integrates changes from the remote main branch into the local branch.
+
+git merge <branch-name>  
+# Merges the specified branch into the current branch.
+
+git rebase <branch-name>
+# Merges the specified branch into the current branch and removes the branch like structure 
+
+## Pushing Changes to Remote Repository
+git push origin main  
+# Pushes changes from the local main branch to the remote repository.

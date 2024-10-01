@@ -1,0 +1,5 @@
+This is my first git commit via terminal.
+Hello World Git here!!!
+
+Experimenting with new branch.
+Experimenting with merge and rebase.
