@@ -1,0 +1,99 @@
+# Basic Docker Commands
+
+1. **Check Docker Version:**
+   ```bash
+   docker --version
+   ```
+   Displays the installed Docker version.
+
+2. **Run a Docker Container:**
+   ```bash
+   docker run hello-world
+   ```
+   Pulls the `hello-world` image from Docker Hub and runs it. This is a great way to verify that Docker is installed correctly.
+
+3. **List Running Containers:**
+   ```bash
+   docker ps
+   ```
+   Shows all currently running containers.
+
+4. **List All Containers:**
+   ```bash
+   docker ps -a
+   ```
+   Lists all containers, including those that are stopped.
+
+5. **Pull an Image:**
+   ```bash
+   docker pull <image-name>
+   ```
+   Downloads a Docker image from Docker Hub. For example:
+   ```bash
+   docker pull ubuntu
+   ```
+
+6. **Remove a Container:**
+   ```bash
+   docker rm <container-id>
+   ```
+   Removes a stopped container. Use `docker ps -a` to find the container ID.
+
+7. **Remove an Image:**
+   ```bash
+   docker rmi <image-name>
+   ```
+   Removes a Docker image. You may need to stop and remove any containers using that image first.
+
+8. **Start a Stopped Container:**
+   ```bash
+   docker start <container-id>
+   ```
+   Starts a previously stopped container.
+
+9. **Stop a Running Container:**
+   ```bash
+   docker stop <container-id>
+   ```
+   Stops a running container.
+
+10. **View Container Logs:**
+    ```bash
+    docker logs <container-id>
+    ```
+    Displays logs from a container.
+
+11. **Execute a Command Inside a Running Container:**
+    ```bash
+    docker exec -it <container-id> /bin/bash
+    ```
+    Opens an interactive terminal inside a running container.
+
+12. **Build a Docker Image from a Dockerfile:**
+    ```bash
+    docker build -t <image-name> .
+    ```
+    Builds a Docker image from a Dockerfile in the current directory.
+
+13. **List Docker Images:**
+    ```bash
+    docker images
+    ```
+    Lists all Docker images on your system.
+
+14. **Remove All Stopped Containers:**
+    ```bash
+    docker container prune
+    ```
+    Removes all stopped containers.
+
+15. **Remove Unused Images:**
+    ```bash
+    docker image prune
+    ```
+
+# Useful Docker Tips
+
+- Use `docker-compose` for managing multi-container applications.
+- Always tag your images with meaningful names and versions.
+- Familiarize yourself with Docker Hub to find and share images.
