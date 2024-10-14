@@ -1,20 +1,23 @@
 package com.arnab.spring13_jwt.service;
 
-import com.arnab.spring12_springsecurity.model.Users;
-import com.arnab.spring12_springsecurity.repo.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.arnab.spring13_jwt.dao.UserRepo;
+import com.arnab.spring13_jwt.model.User;
+
 @Service
 public class UserService {
-    @Autowired
-    private UserRepo repo;
-//    creating BCryptEncoder
-    private BCryptPasswordEncoder encoder=new BCryptPasswordEncoder(10);
-    public void addUser(Users user){
-        user.setPassword(encoder.encode(user.getPassword()));
-        System.out.println(user.getPassword());
-        repo.save(user);
-    }
+	
+@Autowired
+	private UserRepo repo;
+private BCryptPasswordEncoder encoder=new BCryptPasswordEncoder(12);
+
+	public User saveUser(User user) {
+		user.setPassword(encoder.encode(user.getPassword()));
+		System.out.println(user.getPassword());
+	return repo.save(user) ;
+		
+	}
 }

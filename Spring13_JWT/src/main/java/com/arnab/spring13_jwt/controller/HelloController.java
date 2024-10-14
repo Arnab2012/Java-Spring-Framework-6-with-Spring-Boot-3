@@ -1,20 +1,20 @@
 package com.arnab.spring13_jwt.controller;
 
-import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import jakarta.servlet.http.HttpServletRequest;
 
 @RestController
 public class HelloController {
 
-    @GetMapping("hello")
-    public String greet(HttpServletRequest request){
-        return "Hello Security "+request.getSession().getId();
-    }
-
-    @GetMapping("about")
-    public String about(HttpServletRequest request){
-        return "About Spring Security "+request.getSession().getId();
-    }
-
+	@GetMapping("hello")
+	public String greet() {
+		return "Hello World ";
+	}
+	
+	@GetMapping("about")
+	public String about(HttpServletRequest request) {
+		return "Telusko "+request.getSession().getId();
+	}
 }
